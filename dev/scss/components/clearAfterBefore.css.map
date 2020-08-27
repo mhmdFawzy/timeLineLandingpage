@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,iBADa,AACZ,OAAO,CAAC;EACL,OAAO,EAAE,EAAE;EACX,KAAK,EAAE,cAAc;EACrB,MAAM,EAAE,cAAc;CACzB;;AALL,AAOI,iBAPa,AAOZ,QAAQ,CAAC;EACN,OAAO,EAAE,EAAE;EACX,KAAK,EAAE,cAAc;EACrB,MAAM,EAAE,cAAc;CACzB",
+    "sources": [
+        "clearAfterBefore.scss"
+    ],
+    "names": [],
+    "file": "clearAfterBefore.css"
+}

@@ -1,0 +1,74 @@
+$sizes: 5,
+10,
+20,
+30,
+40,
+50,
+60,
+70,
+80,
+90,
+100;
+$displays: flex,
+flexcolumn,
+block,
+none,
+inline,
+inline-block;
+
+
+@each $size in $sizes {
+    .w-#{$size} {
+
+        width: $size* 1% !important;
+    }
+}
+
+@each $size in $sizes {
+    .p-#{$size} {
+        padding: ($size* 0.01) * 1rem !important;
+    }
+
+    .px-#{$size} {
+        padding: 0 ($size* 0.01) * 1rem !important;
+    }
+
+    .py-#{$size} {
+        padding: ($size* 0.01) * 1rem 0 !important;
+    }
+}
+
+@mixin pad($top:0, $right:0, $left:0, $bottom:0) {
+    padding-bottom: $bottom;
+    padding-top: $top;
+    padding-right: $right;
+    padding-left: $left;
+
+}
+
+@mixin mar($top:0, $right:0, $left:0, $bottom:0) {
+    margin-bottom: $bottom;
+    margin-top: $top;
+    margin-right: $right;
+    margin-left: $left;
+
+}
+
+@each $display in $displays {
+    @if $display==flexcolumn {
+        .d-#{$display} {
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+
+    @else {
+
+        .d-#{$display} {
+            display: $display;
+        }
+    }
+
+
+}

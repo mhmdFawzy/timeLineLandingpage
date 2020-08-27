@@ -1,0 +1,12 @@
+.clearBeforeAfter::after {
+  content: "";
+  width: 0px !important;
+  height: 0px !important;
+}
+
+.clearBeforeAfter::before {
+  content: "";
+  width: 0px !important;
+  height: 0px !important;
+}
+/*# sourceMappingURL=clearAfterBefore.css.map */

@@ -1,0 +1,43 @@
+ul {
+    width: 100%;
+    font-family: Roboto,
+        sans-serif;
+
+    &.list-unstyled {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    &.twoColList {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+        @include for-tablet-portrait-up {
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+
+        @include for-tablet-landscape {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+
+
+
+    }
+
+    &.list-icons {
+        display: flex;
+
+        @include for-desktop-up {
+            justify-content: flex-end;
+        }
+
+    }
+}

@@ -1,0 +1,39 @@
+.btn {
+    text-align: center;
+    text-transform: uppercase;
+    height: 4rem;
+    width: 9rem;
+    background: none;
+    line-height: 4rem;
+    background: none;
+    border: 0.1rem solid rgba(144, 144, 144, 0.25);
+    outline: none;
+    border-radius: 0.5rem;
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 1s all;
+
+    &:hover {
+        border: 0.1rem solid $main-color;
+        color: $main-color;
+    }
+
+    a {
+        text-decoration: none;
+
+    }
+
+    &__background {
+        background: $main-color;
+        border: none;
+
+        &:hover {
+            background: lighten($color: $main-color, $amount: 20);
+            border: none;
+            color: initial;
+            outline: none;
+        }
+
+    }
+}

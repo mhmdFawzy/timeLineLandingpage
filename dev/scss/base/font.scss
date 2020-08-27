@@ -1,0 +1,100 @@
+@import "./abstract/media";
+
+html {
+    font-size: 10px;
+    font-family: 'Roboto',
+        sans-serif;
+
+    @include for-desktop-up {
+        // (min-width: 1200px)
+        font-size: 14px;
+
+    }
+
+    @include for-big-desktop-up {
+        // (min-width: 1800px)
+        font-size: 19px;
+
+    }
+
+    @include for-4k-desktop-up {
+        // (min-width: 2200px)
+        font-size: 22px;
+
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 1.5rem 0;
+}
+
+h1 {
+    font-size: 6.2rem;
+    font-weight: 900;
+
+
+}
+
+h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+
+}
+
+h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-family: 'Noto Sans JP',
+        sans-serif;
+
+
+}
+
+h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+
+p {
+    font-size: 1.5rem;
+
+}
+
+.lead {
+    font-size: 1.1rem;
+    letter-spacing: 0.175em;
+    line-height: 2.5;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+a,
+span,
+p,
+.lead {
+    font-family: "Open Sans";
+
+}
+
+.text-capital {
+    text-transform: capitalize;
+}
+
+.text-upper {
+    text-transform: uppercase;
+    ;
+}
+
+.text-lower {
+    text-transform: lowercase;
+}

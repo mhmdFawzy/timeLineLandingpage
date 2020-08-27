@@ -1,0 +1,244 @@
+@import"./base/general.scss";
+@import"./base/font.scss";
+@import"./abstract/var";
+@import "./abstract/media";
+@import "./abstract/utilites";
+@import"./components/link.scss";
+@import"./layout/section.scss";
+@import"./components/img.scss";
+@import"./components/list.scss";
+@import"./components/btn.scss";
+
+#hero {
+    .hero--img {
+        height: 100vh;
+        background-image: url("./../images/pic01.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.hero--headlines {
+    background-image: url("./../images/lines.png");
+    background-color: $main-color;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: unset;
+    padding: 3rem 2rem;
+    min-height: 25vh;
+    display: flex;
+
+    @include for-tablet-portrait-up {
+        // (min-width: 600px) and (orientation:portrait)
+        justify-content: right;
+
+    }
+
+    @include for-tablet-landscape {
+        // (min-width: 600px) and (orientation:landscape)
+        justify-content: right;
+
+    }
+
+    @include for-desktop-up {
+        // (min-width: 1200px)
+        padding: 0;
+        justify-content: space-around;
+        background-attachment: fixed;
+        min-height: auto;
+        text-align: right;
+    }
+
+    .container {
+        height: inherit;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        // width: 50%;
+
+        @include for-desktop-up {
+            // (min-width: 1200px)
+            width: 40vw;
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                height: 50%;
+                top: 50%;
+                width: 0.2rem;
+                background-color: $secondary-color;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                right: 0;
+                width: 3rem;
+                height: 0.2rem;
+                background-color: $secondary-color;
+
+            }
+        }
+
+
+        div {
+            position: relative;
+            width: 100%;
+
+            @include for-desktop-up {
+
+                // (min-width: 1200px)
+                padding-right: 5rem;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 1rem;
+                    top: calc(50% - 0.5rem);
+                    height: 1rem;
+                    background-color: $secondary-color;
+                    border-radius: 50%;
+                    left: calc(100% - 3rem);
+                }
+            }
+
+            a.scroll {
+                display: none;
+
+                @include for-desktop-up {
+
+                    // (min-width: 1200px)
+                    display: block;
+                    writing-mode: vertical-rl;
+                    text-orientation: mixed;
+                    position: relative;
+                    font-size: 4rem;
+                    font-weight: 900;
+                    float: right;
+
+                }
+            }
+        }
+    }
+
+
+}
+
+.section {
+    &--headlines {
+        @extend .hero--headlines;
+
+        .container {
+            align-items: unset;
+            font-family: 'Noto Sans JP',
+                sans-serif;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            div {
+                height: inherit;
+                display: flex;
+                max-height: 100vh;
+                flex-direction: column;
+                justify-content: space-between;
+
+                &::after {
+                    top: 3.5rem;
+                }
+
+                h4 {
+                    letter-spacing: 0.5rem;
+                }
+
+                p {
+                    // display: none;
+                    display: block;
+
+                    @include for-desktop-up {
+                        display: block;
+                    }
+                }
+
+
+            }
+
+            &::before {
+                top: 4rem
+            }
+
+            &::after {
+                top: 0;
+                height: 100%;
+            }
+        }
+    }
+
+    &--content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5rem 3rem;
+
+        @include for-desktop-up {
+            text-align: justify;
+
+        }
+
+        &--form {
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            input,
+            textarea {
+                margin: 0.5rem 0;
+                border-radius: 0.325rem;
+                border: solid 2px rgba(144, 144, 144, 0.25);
+                color: inherit;
+                display: block;
+                outline: 0;
+                padding: 0 1rem;
+                text-decoration: none;
+                height: 3.5rem;
+                line-height: 2rem;
+                width: 100%;
+
+                &:focus {
+                    border: 0.1rem solid $main-color;
+                }
+            }
+
+            textarea {
+                height: auto;
+            }
+
+            .btn {
+                margin: 0.5rem 0;
+            }
+        }
+    }
+}
+
+#last {
+
+    .section--headlines {
+        .container {
+            .last {
+                &::after {
+                    right: -5.4rem;
+                    left: unset;
+                }
+            }
+
+            &::after {
+                height: 85%;
+            }
+        }
+    }
+}
+
+@import"./components/clearAfterBefore.scss";

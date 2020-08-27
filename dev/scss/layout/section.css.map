@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,OAAO,CAAC;EACJ,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,cAAc;EACrC,kBAAkB,EAAE,cAAc;EAClC,eAAe,EAAE,GAAG;EACpB,YAAY,EAAE,GAAG;CASpB;;ACWG,MAAM,EAAE,SAAS,EAAE,MAAM;EDzB7B,AAAA,OAAO,CAAC;IASA,qBAAqB,EAAE,cAAc;IACrC,kBAAkB,EAAE,cAAc;IAClC,MAAM,EAAE,IAAI;GAGnB",
+    "sources": [
+        "section.scss",
+        "../abstract/_media.scss"
+    ],
+    "names": [],
+    "file": "section.css"
+}
